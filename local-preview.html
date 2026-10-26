@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The CRISPR Index</title>
+<meta name="description" content="The CRISPR Index — browse recent gene-editing research and learn how CRISPR is changing biotechnology.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#home" aria-label="The CRISPR Index home"><img src="assets/crispr-index-logo.png" alt="The CRISPR Index"></a>
+      <button class="menu" aria-label="Menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+      <div class="navlinks">
+        <a href="#research">Browse Research</a>
+        <a href="#explorer">CRISPR Explorer</a>
+        <a href="#about">About</a>
+        <a class="nav-pill" href="#research">Open the Index</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="label">A clearer way to learn about gene editing</div>
+      <h1>The CRISPR Index</h1>
+      <p>CRISPR research can be hard to follow. This site brings together recent studies and explains the science behind them, so you can see what researchers are working on and why it matters.</p>
+      <div class="actions">
+        <a class="action blue" href="#research">Browse Research</a>
+        <a class="action" href="#explorer">Learn about CRISPR</a>
+      </div>
+    </div>
+    <div class="science-visual">
+      <div class="dna-stage">
+        <div class="helix" id="helix"></div>
+        <div class="cas">Cas9</div>
+        <div class="guide">guide RNA</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="research" id="research">
+  <div class="wrap">
+    <div class="section-top">
+      <div class="section-id">01 / Browse Research</div>
+      <div class="section-copy">
+        <h2>Read the latest research.<br>Understand what it means.</h2>
+        <p>Find recent gene-editing studies in one place. Each paper has a plain-language summary, a guide to the key ideas and an AI Tutor you can ask when something doesn’t make sense.</p>
+      </div>
+    </div>
+
+    <div class="library-meta"><span id="paperCount">35 papers</span><span>Every paper includes a guide, a link to the original research and an AI Tutor.</span></div>
+    <div class="filterbar">
+      <input class="field" id="search" type="search" placeholder="Search title, author, journal or topic">
+      <select class="field" id="year">
+        <option value="">All years</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option><option>2026</option>
+      </select>
+      <select class="field" id="technique">
+        <option value="">All techniques</option><option>CRISPR-Cas9</option><option>Base editing</option><option>Prime editing</option><option>CRISPRi</option><option>CRISPRa</option><option>Cas12</option><option>Cas13</option>
+      </select>
+      <select class="field" id="sort">
+        <option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="alpha">Title A–Z</option>
+      </select>
+    </div>
+
+    <div class="library">
+      <div class="paper-list" id="paperList"></div>
+      <div class="detail" id="detail"></div>
+    </div>
+  </div>
+</section>
+
+<section class="explorer" id="explorer">
+  <div class="wrap">
+    <div class="section-top">
+      <div class="section-id">02 / CRISPR Explorer</div>
+      <div class="section-copy">
+        <h2>New to CRISPR?<br>Start here.</h2>
+        <p>Start with DNA, guide RNA and Cas9, then learn about mutations, gene expression and other CRISPR techniques. You can begin with a simple explanation and read more when you’re ready.</p>
+      </div>
+    </div>
+    <div class="explorer-layout">
+      <div class="tech-nav" id="techNav"></div>
+      <div class="tech-content" id="techContent"></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-shell">
+    <aside class="profile-card">
+      <div class="profile-image">
+        <img src="assets/daniel-profile.png" alt="Daniel Dominick, creator of The CRISPR Index">
+      </div>
+      <div class="profile-kicker">Student creator</div>
+      <h3>Daniel Dominick</h3>
+      <p>Helping more people understand gene-editing research.</p>
+    </aside>
+
+    <div class="about-content">
+      <div class="section-id">03 / About</div>
+      <h2>Why I made this website:</h2>
+      <p class="about-lead">I’m Daniel Dominick. I’m a student who’s fascinated by biotechnology, especially how scientists are using gene editing.</p>
+      <p>When I first tried reading gene-editing papers, I often had to stop and look things up. The research was fascinating, but the language assumed I already knew a lot about the subject.</p>
+      <p>That’s why I built The CRISPR Index. I wanted one place where I could find interesting studies, understand what the researchers actually did and learn more about tools like CRISPR-Cas9, base editing and prime editing. I hope it helps other curious students too.</p>
+
+      <div class="mission-card">
+        <h4>Mission</h4>
+        <p>Help students and anyone curious about gene editing understand the research, without needing to know all the science beforehand.</p>
+      </div>
+
+      <div class="about-signoff">The CRISPR Index · Created by Daniel Dominick</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-name">Contact Us</div>
+    <div class="footer-small">Email Address: <a href="mailto:thecrisprindex@gmail.com">thecrisprindex@gmail.com</a></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
